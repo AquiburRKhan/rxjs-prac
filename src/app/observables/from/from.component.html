@@ -1,0 +1,53 @@
+<h3>From Observable: </h3>
+<p>Description: </p>
+<p>Creates an Observable from an Array, an array-like object, a Promise, an iterable object, or an Observable-like object.
+  A String, in this context, is treated as an array of characters.
+</p>
+<div>
+  <h5>Examples 1: </h5>
+  <p>from ( 10, 20, 30 )<br>
+    .subscribe() --->
+    <br>
+    ERROR TypeError: number is not observable
+  </p>
+</div>
+<div>
+  <h5>Examples 2: </h5>
+  <p>from ( [ 10, 20, 30 ] )<br>
+    .subscribe() --->
+    <br>
+    next: 10
+    <br>
+    next: 20
+    <br>
+    next: 30
+  </p>
+</div>
+<div>
+  <h5>Examples 3: </h5>
+  <p>from ('Hello World')<br>
+    .subscribe() --->
+    <br>
+    next: H
+    <br>
+    next: e
+    <br>
+    next: l
+    <br>
+    next: l
+    <br>
+    next: o
+    <br>
+    next:
+    <br>
+    next: W
+    <br>
+    next: o
+    <br>
+    next: r
+    <br>
+    next: l
+    <br>
+    next: d
+  </p>
+</div>
