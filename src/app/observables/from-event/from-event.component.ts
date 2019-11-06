@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-from-event',
@@ -6,22 +7,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FromEventComponent implements OnInit {
 
+  @ViewChild('fromEventElement', { static: true }) el: ElementRef;
+  @ViewChild('ResetButton', { static: true }) resetEl: ElementRef;
+  public clickCount = 0;
+
   constructor() {
-    // this.fromEventExample1();
-    // this.fromEventExample2();
-    // this.fromEventExample3();
-   }
+  }
 
   ngOnInit() {
   }
 
-  // fromEventExample1() {
-  //   console.log('Of observables: ');
-  //   console.log('Example 1: ');
-  //   of(10, 20, 30).subscribe(next => {
-  //     console.log('next: ', next)
-  //   });
-  // }
+  ngAfterViewInit(): void {
+    this.fromEventExample1(this.el, this.resetEl);
+    // this.fromEventExample2();
+    // this.fromEventExample3();
+
+  }
+
+  fromEventExample1(el, resetEl) {
+    console.log('');
+    console.log('From observables: ');
+    console.log('Example 1: ');
+
+    const mouseClicks = fromEvent(el.nativeElement, 'click');
+    const resetMouseClick = fromEvent(resetEl.nativeElement, 'click');
+
+    // Subscribe to start listening for mouse-click events
+    const subscription = mouseClicks.subscribe((evt: MouseEvent) => {
+      ++this.clickCount;
+    });
+
+    const resetSubscription = resetMouseClick.subscribe((evt: MouseEvent) => {
+      this.clickCount = 0;
+    });
+  }
 
   // fromEventExample2() {
   //   console.log('Example 2: ');

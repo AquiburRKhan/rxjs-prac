@@ -5,33 +5,26 @@
   </h1>
 </div>
 <div class="row m-3">
-  <div class="col-6">
-    <app-of></app-of>
+  <div class="col-4">
+    <ul>
+      <li style="cursor: pointer;" class="py-2" (click)="changeMenu('of')">Of</li>
+      <li style="cursor: pointer;" class="py-2" (click)="changeMenu('from')">From</li>
+      <li style="cursor: pointer;" class="py-2" (click)="changeMenu('from-event')">From Event</li>
+      <li style="cursor: pointer;" class="py-2" (click)="changeMenu('combine-latest')">Combine Latest</li>
+    </ul>
   </div>
-  <div class="col-6">
-    <app-from></app-from>
-  </div>
-  <p>It is important to note the difference between <strong style="color: red">of</strong> and <strong style="color: red">from</strong>
-    when passing an array-like structure (including strings):
-    <br>
-    <span style="background-color: lightgray; padding: 10px; line-height: 50px;">Observable.of([1, 2, 3]).subscribe(x => console.log(x));</span>
-    <br>
-    would print the whole array at once.
-
-    On the other hand,
-    <br>
-    <span style="background-color: lightgray; padding: 10px; line-height: 50px;">Observable.from([1, 2, 3]).subscribe(x => console.log(x));</span>
-    <br>
-    prints the elements 1 by 1.
-    <br>
-    For strings the behaviour is the same, but at character level.
-  </p>
-</div>
-<div class="row m-3">
-  <div class="col-6">
-
-  </div>
-  <div class="col-6">
-
+  <div class="col-8">
+    <div *ngIf="currentMenu == 'of'">
+      <app-of></app-of>
+    </div>
+    <div *ngIf="currentMenu == 'from'">
+      <app-from></app-from>
+    </div>
+    <div *ngIf="currentMenu == 'from-event'">
+      <app-from-event></app-from-event>
+    </div>
+    <div *ngIf="currentMenu == 'combine-latest'">
+      <app-combine-latest></app-combine-latest>
+    </div>
   </div>
 </div>
