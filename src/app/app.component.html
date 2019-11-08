@@ -11,6 +11,7 @@
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('from')">From</li>
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('from-event')">From Event</li>
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('combine-latest')">Combine Latest</li>
+      <li style="cursor: pointer;" class="py-2" (click)="changeMenu('concat')">Concat</li>
     </ul>
   </div>
   <div class="col-8">
@@ -25,6 +26,9 @@
     </div>
     <div *ngIf="currentMenu == 'combine-latest'">
       <app-combine-latest></app-combine-latest>
+    </div>
+    <div *ngIf="currentMenu == 'concat'">
+      <app-concat></app-concat>
     </div>
   </div>
 </div>

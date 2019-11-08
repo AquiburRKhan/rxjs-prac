@@ -1,0 +1,61 @@
+<h3>Concat Observable: </h3>
+<p>Description: </p>
+<p>Concat joins multiple Observables together, by subscribing to them one at a time and merging their results into the
+output Observable. You can pass either an array of Observables, or put them directly as arguments. Passing an empty
+array will result in Observable that completes immediately..</p>
+<div>
+  <h5>Examples 1: </h5>
+  <p>concat(
+    <br>
+    &nbsp; of(1,2,3),
+    <br>
+    <br>
+    &nbsp; of(4, 5, 6),
+    <br>
+    <br>
+    &nbsp; of(7, 8, 9),
+    <br>
+    )<br>
+    .subscribe(res => console.log(res)) --->
+    <br>
+    1
+    <br>
+    2
+    <br>
+    3
+    <br>
+    4
+    <br>
+    5
+    <br>
+    6
+    <br>
+    7
+    <br>
+    8
+    <br>
+    9
+  </p>
+</div>
+<div>
+  <h5>Examples 2: </h5>
+  <p>concat(
+    <br>
+    &nbsp; of([ 1,2,3 ]),
+    <br>
+    <br>
+    &nbsp; of([ 4, 5, 6 ]),
+    <br>
+    <br>
+    &nbsp; of([ 7, 8, 9 ]),
+    <br>
+    )<br>
+    .subscribe(res => console.log(res)) --->
+    <br>
+    [ 1, 2, 3 ]
+    <br>
+    [ 4, 5, 6 ]
+    <br>
+    [ 7, 8, 9 ]
+  </p>
+</div>

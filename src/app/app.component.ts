@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rxjs-prac';
-  currentMenu = 'combine-latest';
+  currentMenu = 'concat';
 
   constructor(){
   }

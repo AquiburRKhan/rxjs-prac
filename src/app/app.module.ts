@@ -7,6 +7,7 @@ import { OfComponent } from './observables/of/of.component';
 import { FromComponent } from './observables/from/from.component';
 import { FromEventComponent } from './observables/from-event/from-event.component';
 import { CombineLatestComponent } from './observables/combine-latest/combine-latest.component';
+import { ConcatComponent } from './observables/concat/concat.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CombineLatestComponent } from './observables/combine-latest/combine-lat
     OfComponent,
     FromComponent,
     FromEventComponent,
-    CombineLatestComponent
+    CombineLatestComponent,
+    ConcatComponent
   ],
   imports: [
     BrowserModule,
