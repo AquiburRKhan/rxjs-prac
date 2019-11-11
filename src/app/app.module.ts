@@ -8,6 +8,8 @@ import { FromComponent } from './observables/from/from.component';
 import { FromEventComponent } from './observables/from-event/from-event.component';
 import { CombineLatestComponent } from './observables/combine-latest/combine-latest.component';
 import { ConcatComponent } from './observables/concat/concat.component';
+import { MergeComponent } from './observables/merge/merge.component';
+import { StartWithComponent } from './observables/start-with/start-with.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ConcatComponent } from './observables/concat/concat.component';
     FromComponent,
     FromEventComponent,
     CombineLatestComponent,
-    ConcatComponent
+    ConcatComponent,
+    MergeComponent,
+    StartWithComponent
   ],
   imports: [
     BrowserModule,

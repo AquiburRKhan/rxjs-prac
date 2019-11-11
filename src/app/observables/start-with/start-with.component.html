@@ -1,0 +1,34 @@
+<h3>Start With Observable: </h3>
+<p>Description: </p>
+<p>First emits its arguments in order, and then any emissions from the source.</p>
+<div>
+  <h5>Examples 1: </h5>
+  <p>of("from source")
+    <br>
+    .pipe(startWith("first", "second"))
+    <br>
+    .subscribe() --->
+    <br>
+    first
+    <br>
+    second
+    <br>
+    from source
+  </p>
+</div>
+<div>
+  <h5>Examples 2: </h5>
+  <p>of ( [ 10, 20, 30 ] )<br>
+    .subscribe() ---> next: (3) [10, 20, 30]
+    <br>
+    Returns full array
+  </p>
+</div>
+<div>
+  <h5>Examples 3: </h5>
+  <p>of ('Hello World')<br>
+    .subscribe() --->
+    <br>
+    next: Hello World
+  </p>
+</div>
