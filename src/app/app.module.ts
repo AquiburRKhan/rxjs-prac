@@ -10,6 +10,7 @@ import { CombineLatestComponent } from './observables/combine-latest/combine-lat
 import { ConcatComponent } from './observables/concat/concat.component';
 import { MergeComponent } from './observables/merge/merge.component';
 import { StartWithComponent } from './observables/start-with/start-with.component';
+import { WithLatestFromComponent } from './observables/with-latest-from/with-latest-from.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StartWithComponent } from './observables/start-with/start-with.componen
     CombineLatestComponent,
     ConcatComponent,
     MergeComponent,
-    StartWithComponent
+    StartWithComponent,
+    WithLatestFromComponent
   ],
   imports: [
     BrowserModule,

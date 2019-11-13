@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rxjs-prac';
-  currentMenu = 'start-with';
+  currentMenu = 'with-latest-from';
 
   constructor(){
   }
