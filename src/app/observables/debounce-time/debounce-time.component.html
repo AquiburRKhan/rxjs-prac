@@ -1,0 +1,29 @@
+<h3>DebounceTime Observable: </h3>
+<p>Description: </p>
+<p>Emits a value from the source Observable only after a particular time span has passed without another source emission.
+</p>
+<div>
+  <h5>Examples 1: </h5>
+  <p>
+    // elem ref
+    <br>
+    const searchBox = document.getElementById('search');
+    <br>
+    <br>
+    // streams
+    <br>
+    const keyup$ = fromEvent(searchBox, 'keyup')
+    <br>
+    <br>
+    keyup$.pipe(<br>
+    map((i: any) => i.currentTarget.value),
+    <br>
+    debounceTime(500)
+    <br>
+    ).subscribe(res => console.log(res));
+    <br>
+    Whatever I type in the searchbox will show up after the given period of time unless I type within that time frame again
+  </p>
+
+  <input type="text" id="search"  placeholder="Debounce" />
+</div>

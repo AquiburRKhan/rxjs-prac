@@ -12,6 +12,7 @@ import { MergeComponent } from './observables/merge/merge.component';
 import { StartWithComponent } from './observables/start-with/start-with.component';
 import { WithLatestFromComponent } from './observables/with-latest-from/with-latest-from.component';
 import { ZipComponent } from './observables/zip/zip.component';
+import { DebounceTimeComponent } from './observables/debounce-time/debounce-time.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ZipComponent } from './observables/zip/zip.component';
     MergeComponent,
     StartWithComponent,
     WithLatestFromComponent,
-    ZipComponent
+    ZipComponent,
+    DebounceTimeComponent
   ],
   imports: [
     BrowserModule,

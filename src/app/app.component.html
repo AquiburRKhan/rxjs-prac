@@ -16,6 +16,7 @@
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('start-with')">Start With</li>
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('with-latest-from')">With Latest From</li>
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('zip')">Zip</li>
+      <li style="cursor: pointer;" class="py-2" (click)="changeMenu('debounce-time')">Debounce Time</li>
     </ul>
   </div>
   <div class="col-8">
@@ -45,6 +46,9 @@
     </div>
     <div *ngIf="currentMenu == 'zip'">
       <app-zip></app-zip>
+    </div>
+    <div *ngIf="currentMenu == 'debounce-time'">
+      <app-debounce-time></app-debounce-time>
     </div>
   </div>
 </div>
