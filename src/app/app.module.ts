@@ -11,6 +11,7 @@ import { ConcatComponent } from './observables/concat/concat.component';
 import { MergeComponent } from './observables/merge/merge.component';
 import { StartWithComponent } from './observables/start-with/start-with.component';
 import { WithLatestFromComponent } from './observables/with-latest-from/with-latest-from.component';
+import { ZipComponent } from './observables/zip/zip.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { WithLatestFromComponent } from './observables/with-latest-from/with-lat
     ConcatComponent,
     MergeComponent,
     StartWithComponent,
-    WithLatestFromComponent
+    WithLatestFromComponent,
+    ZipComponent
   ],
   imports: [
     BrowserModule,

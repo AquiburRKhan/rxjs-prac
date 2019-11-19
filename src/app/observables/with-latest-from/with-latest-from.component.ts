@@ -16,23 +16,24 @@ export class WithLatestFromComponent implements OnInit {
   logo$;
 
   constructor() {
-
-    // 2. Create the two persons - color and logo observables,
-    // They will communicate with us later (when we subscribe)
-    this.color$ = new Subject<Color>();
-    this.logo$ = new Subject<Logo>();
   }
 
   ngOnInit() {
-    this.color$.pipe(withLatestFrom(this.logo$))
-      .subscribe(([color, logo]) => console.log(`${color} shirt with ${logo}`));
-    // this.withLatestFromExample1();
-    // this.withLatestFromExample2();
+    this.withLatestFromExample1();
+    this.withLatestFromExample2();
     this.withLatestFromExample3();
   }
 
   withLatestFromExample1(){
     console.log('Example 1')
+
+    // 2. Create the two persons - color and logo observables,
+    // They will communicate with us later (when we subscribe)
+    this.color$ = new Subject<Color>();
+    this.logo$ = new Subject<Logo>();
+
+    this.color$.pipe(withLatestFrom(this.logo$))
+      .subscribe(([color, logo]) => console.log(`${color} shirt with ${logo}`));
 
     this.color$.next('white');
     this.logo$.next('fish');
@@ -51,6 +52,14 @@ export class WithLatestFromComponent implements OnInit {
     console.log('')
     console.log('Example 2')
 
+    // 2. Create the two persons - color and logo observables,
+    // They will communicate with us later (when we subscribe)
+    this.color$ = new Subject<Color>();
+    this.logo$ = new Subject<Logo>();
+
+    this.color$.pipe(withLatestFrom(this.logo$))
+      .subscribe(([color, logo]) => console.log(`${color} shirt with ${logo}`));
+
     this.logo$.next('fish');
     this.color$.next('white');
 
@@ -67,6 +76,14 @@ export class WithLatestFromComponent implements OnInit {
   withLatestFromExample3() {
     console.log('')
     console.log('Example 3')
+
+    // 2. Create the two persons - color and logo observables,
+    // They will communicate with us later (when we subscribe)
+    this.color$ = new Subject<Color>();
+    this.logo$ = new Subject<Logo>();
+
+    this.color$.pipe(withLatestFrom(this.logo$))
+      .subscribe(([color, logo]) => console.log(`${color} shirt with ${logo}`));
 
     this.color$.next('white');
     this.color$.next('green');
