@@ -14,6 +14,7 @@ import { WithLatestFromComponent } from './observables/with-latest-from/with-lat
 import { ZipComponent } from './observables/zip/zip.component';
 import { DebounceTimeComponent } from './observables/debounce-time/debounce-time.component';
 import { DistinctUntilChangedComponent } from './observables/distinct-until-changed/distinct-until-changed.component';
+import { FilterComponent } from './observables/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DistinctUntilChangedComponent } from './observables/distinct-until-chan
     WithLatestFromComponent,
     ZipComponent,
     DebounceTimeComponent,
-    DistinctUntilChangedComponent
+    DistinctUntilChangedComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
