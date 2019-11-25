@@ -13,6 +13,7 @@ import { StartWithComponent } from './observables/start-with/start-with.componen
 import { WithLatestFromComponent } from './observables/with-latest-from/with-latest-from.component';
 import { ZipComponent } from './observables/zip/zip.component';
 import { DebounceTimeComponent } from './observables/debounce-time/debounce-time.component';
+import { DistinctUntilChangedComponent } from './observables/distinct-until-changed/distinct-until-changed.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DebounceTimeComponent } from './observables/debounce-time/debounce-time
     StartWithComponent,
     WithLatestFromComponent,
     ZipComponent,
-    DebounceTimeComponent
+    DebounceTimeComponent,
+    DistinctUntilChangedComponent
   ],
   imports: [
     BrowserModule,
