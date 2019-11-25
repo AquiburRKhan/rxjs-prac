@@ -15,6 +15,7 @@ import { ZipComponent } from './observables/zip/zip.component';
 import { DebounceTimeComponent } from './observables/debounce-time/debounce-time.component';
 import { DistinctUntilChangedComponent } from './observables/distinct-until-changed/distinct-until-changed.component';
 import { FilterComponent } from './observables/filter/filter.component';
+import { TakeComponent } from './observables/take/take.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FilterComponent } from './observables/filter/filter.component';
     ZipComponent,
     DebounceTimeComponent,
     DistinctUntilChangedComponent,
-    FilterComponent
+    FilterComponent,
+    TakeComponent
   ],
   imports: [
     BrowserModule,

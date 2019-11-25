@@ -19,6 +19,7 @@
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('debounce-time')">Debounce Time</li>
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('distinct-until-changed')">Distinct Until Changed</li>
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('filter')">Filter</li>
+      <li style="cursor: pointer;" class="py-2" (click)="changeMenu('take')">Take</li>
     </ul>
   </div>
   <div class="col-8">
@@ -57,6 +58,9 @@
     </div>
     <div *ngIf="currentMenu == 'filter'">
       <app-filter></app-filter>
+    </div>
+    <div *ngIf="currentMenu == 'take'">
+      <app-take></app-take>
     </div>
   </div>
 </div>
