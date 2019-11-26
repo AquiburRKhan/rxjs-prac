@@ -1,0 +1,24 @@
+<h3>Take Until Operator: </h3>
+<p>Description: </p>
+<p>Lets values pass until a second Observable, notifier, emits a value. Then, it completes.
+</p>
+<div>
+  <h5>Examples 1: </h5>
+  <p>
+    const source = interval(1000);
+    <br>
+    <br>
+    const clicks = fromEvent(document, 'click');
+    <br>
+    <br>
+    const result = source.pipe(takeUntil(clicks));
+    <br>
+    result.subscribe(x => console.log(x)); --->
+    <br>
+    1
+    <br>
+    2
+    <br>
+    (Until mouse click)
+  </p>
+</div>

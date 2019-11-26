@@ -16,6 +16,8 @@ import { DebounceTimeComponent } from './observables/debounce-time/debounce-time
 import { DistinctUntilChangedComponent } from './observables/distinct-until-changed/distinct-until-changed.component';
 import { FilterComponent } from './observables/filter/filter.component';
 import { TakeComponent } from './observables/take/take.component';
+import { TakeUntilComponent } from './observables/take-until/take-until.component';
+import { BufferTimeComponent } from './observables/buffer-time/buffer-time.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { TakeComponent } from './observables/take/take.component';
     DebounceTimeComponent,
     DistinctUntilChangedComponent,
     FilterComponent,
-    TakeComponent
+    TakeComponent,
+    TakeUntilComponent,
+    BufferTimeComponent
   ],
   imports: [
     BrowserModule,
