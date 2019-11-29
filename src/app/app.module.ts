@@ -18,6 +18,7 @@ import { FilterComponent } from './observables/filter/filter.component';
 import { TakeComponent } from './observables/take/take.component';
 import { TakeUntilComponent } from './observables/take-until/take-until.component';
 import { BufferTimeComponent } from './observables/buffer-time/buffer-time.component';
+import { ConcatMapComponent } from './observables/concat-map/concat-map.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { BufferTimeComponent } from './observables/buffer-time/buffer-time.compo
     FilterComponent,
     TakeComponent,
     TakeUntilComponent,
-    BufferTimeComponent
+    BufferTimeComponent,
+    ConcatMapComponent
   ],
   imports: [
     BrowserModule,

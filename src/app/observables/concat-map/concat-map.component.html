@@ -1,0 +1,26 @@
+<h3>ConcatMap Operator: </h3>
+<p>Description: </p>
+<p>Map values to inner observable, subscribe and emit in order / Projects each source value to
+  an inner Observable which is merged in the output Observable, in a serialized fashion waiting
+  for each one to complete before merging the next. concatMap does not subscribe to the next observable until the previous completes.
+</p>
+<div>
+  <h5>Examples 1: </h5>
+  <p>const source = of(2000, 1000)
+    <br>
+    <br>
+    const example = source.pipe(
+    <br>
+    concatMap(val => of(`Delayed by: $ &#123; val &#125; ms`)
+    <br>
+    .pipe(delay(val)))
+    <br>
+    );
+    <br>
+    .subscribe(val => console.log(`With concatMap: $&#123; val &#125;`))
+    <br>
+    With concatMap: Delayed by: 2000ms
+    <br>
+    With concatMap: Delayed by: 1000ms
+  </p>
+</div>

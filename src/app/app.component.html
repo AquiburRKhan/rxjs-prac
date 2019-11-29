@@ -22,6 +22,7 @@
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('take')">Take</li>
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('take-until')">Take Until</li>
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('buffer-time')">Buffer Time</li>
+      <li style="cursor: pointer;" class="py-2" (click)="changeMenu('concat-map')">Concat Map</li>
     </ul>
   </div>
   <div class="col-8">
@@ -69,6 +70,9 @@
     </div>
     <div *ngIf="currentMenu == 'buffer-time'">
       <app-buffer-time></app-buffer-time>
+    </div>
+    <div *ngIf="currentMenu == 'concat-map'">
+      <app-concat-map></app-concat-map>
     </div>
   </div>
 </div>
