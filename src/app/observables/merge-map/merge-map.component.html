@@ -1,0 +1,76 @@
+<h3>Merge Map Operator: </h3>
+<p>Description: </p>
+<p>Returns an Observable that emits items based on applying a function
+  that you supply to each item emitted by the sourceObservable, where that function returns an Observable,
+  and then merging those resulting Observables and emitting the
+  results of this merger. MergeMap allows for multiple inner subscriptions to be active at a time.
+  Be aware that because mergeMap maintains multiple active inner subscriptions at once it's possible to create a memory
+  leak through long-lived inner subscriptions.
+</p>
+<div>
+  <h5>Examples 1: </h5>
+  <p>
+    const letters = of('a', 'b', 'c');
+    <br>
+    const numbers = of('1', '2', '3');
+    <br>
+    <br>
+    const results = letters.pipe(
+    <br>
+    mergeMap( x => numbers.pipe(map( i => x + i )))
+    <br>
+    );
+    <br>
+    <br>
+    results.subscribe(res => console.log(res)) --->
+    <br>
+    <br>
+    a1
+    <br>
+    a2
+    <br>
+    a3
+    <br>
+    b1
+    <br>
+    b2
+    <br>
+    b3
+    <br>
+    c1
+    <br>
+    c2
+    <br>
+    c3
+  </p>
+</div>
+<div>
+  <h5>Examples 2: </h5>
+  <p>
+  const getData = (param) => &#123;
+    <br>
+  &nbsp; return of(`retrieved new data with param $&#123;param&#125;`).pipe(
+    <br>
+  delay(1000)
+  <br>
+  &nbsp; )
+  <br>
+  &#125;
+  <br>
+  <br>
+  from([1, 2, 3, 4]).pipe(
+  <br>
+  &nbsp; mergeMap(param => getData(param))
+  <br>
+  ).subscribe(val => console.log(val)); --->
+  <br>
+  <br>
+  retrieved new data with param 1
+  <br>
+  retrieved new data with param 2
+  <br>
+  retrieved new data with param 3
+  <br>
+  retrieved new data with param 4
+  </p>
+</div>

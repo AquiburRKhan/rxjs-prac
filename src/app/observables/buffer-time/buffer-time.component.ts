@@ -16,7 +16,7 @@ export class BufferTimeComponent implements OnInit {
   }
 
   bufferTimeExample1(){
-    const source = interval(1000);
+    const source = interval(500);
     const example = source.pipe(bufferTime(2000),take(4));
     example.subscribe(val =>
       console.log('Buffered with Time:', val)

@@ -20,6 +20,7 @@ import { TakeUntilComponent } from './observables/take-until/take-until.componen
 import { BufferTimeComponent } from './observables/buffer-time/buffer-time.component';
 import { ConcatMapComponent } from './observables/concat-map/concat-map.component';
 import { MapComponent } from './observables/map/map.component';
+import { MergeMapComponent } from './observables/merge-map/merge-map.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MapComponent } from './observables/map/map.component';
     TakeUntilComponent,
     BufferTimeComponent,
     ConcatMapComponent,
-    MapComponent
+    MapComponent,
+    MergeMapComponent
   ],
   imports: [
     BrowserModule,
