@@ -23,6 +23,7 @@ import { MapComponent } from './observables/map/map.component';
 import { MergeMapComponent } from './observables/merge-map/merge-map.component';
 import { ScanComponent } from './observables/scan/scan.component';
 import { SwitchMapComponent } from './observables/switch-map/switch-map.component';
+import { TapComponent } from './observables/tap/tap.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { SwitchMapComponent } from './observables/switch-map/switch-map.componen
     MapComponent,
     MergeMapComponent,
     ScanComponent,
-    SwitchMapComponent
+    SwitchMapComponent,
+    TapComponent
   ],
   imports: [
     BrowserModule,

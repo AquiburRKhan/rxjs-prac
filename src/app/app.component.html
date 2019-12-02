@@ -27,6 +27,7 @@
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('concat-map')">Concat Map</li>
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('switch-map')">Switch Map</li>
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('scan')">Scan</li>
+      <li style="cursor: pointer;" class="py-2" (click)="changeMenu('tap')">Tap</li>
     </ul>
   </div>
   <div class="col-8">
@@ -89,6 +90,9 @@
     </div>
     <div *ngIf="currentMenu == 'scan'">
       <app-scan></app-scan>
+    </div>
+    <div *ngIf="currentMenu == 'tap'">
+      <app-tap></app-tap>
     </div>
   </div>
 </div>
