@@ -1,0 +1,52 @@
+<h3>Switch Map Operator: </h3>
+<p>Description: </p>
+<p>The main difference between switchMap and other flattening operators is the cancelling effect. On each emission the
+previous inner observable (the result of the function you supplied) is cancelled and the new observable is subscribed.
+You can remember this by the phrase switch to a new observable.
+</p>
+<div>
+  <h5>Examples 1: </h5>
+  <p>const switched = of(1, 2, 3).pipe(switchMap((x: number) => of(x, x ** 2, x ** 3)));<br>
+    switched.subscribe(x => console.log(x)); --->
+    <br>
+    1
+    <br>
+    1
+    <br>
+    1
+    <br>
+    2
+    <br>
+    4
+    <br>
+    8
+    <br>
+    3
+    <br>
+    9
+    <br>
+    27
+  </p>
+</div>
+<div>
+  <h5>Examples 2: </h5>
+  <button class="btn btn-primary" #ResetButton>Reset</button>
+  <br>
+  <p>Interval Count: {{ intervalCount }}</p>
+  <p>
+    fromEvent(this.resetEl.nativeElement, 'click')
+    <br>
+    .pipe(
+    <br>
+    switchMap(() => interval(1000))
+    <br>
+    )
+    <br>
+    .subscribe(res => &#123;
+    <br>
+    this.intervalCount = res;
+    <br>
+    &#125;);
+    <br>
+  </p>
+</div>
