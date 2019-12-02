@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rxjs-prac';
-  currentMenu = 'merge-map';
+  currentMenu = 'scan';
 
   constructor(){
   }

@@ -21,6 +21,7 @@ import { BufferTimeComponent } from './observables/buffer-time/buffer-time.compo
 import { ConcatMapComponent } from './observables/concat-map/concat-map.component';
 import { MapComponent } from './observables/map/map.component';
 import { MergeMapComponent } from './observables/merge-map/merge-map.component';
+import { ScanComponent } from './observables/scan/scan.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MergeMapComponent } from './observables/merge-map/merge-map.component';
     BufferTimeComponent,
     ConcatMapComponent,
     MapComponent,
-    MergeMapComponent
+    MergeMapComponent,
+    ScanComponent
   ],
   imports: [
     BrowserModule,
