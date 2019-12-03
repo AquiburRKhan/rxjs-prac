@@ -28,6 +28,7 @@
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('switch-map')">Switch Map</li>
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('scan')">Scan</li>
       <li style="cursor: pointer;" class="py-2" (click)="changeMenu('tap')">Tap</li>
+      <li style="cursor: pointer;" class="py-2" (click)="changeMenu('share')">Share</li>
     </ul>
   </div>
   <div class="col-8">
@@ -93,6 +94,9 @@
     </div>
     <div *ngIf="currentMenu == 'tap'">
       <app-tap></app-tap>
+    </div>
+    <div *ngIf="currentMenu == 'share'">
+      <app-share></app-share>
     </div>
   </div>
 </div>
