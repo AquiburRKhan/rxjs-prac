@@ -1,18 +1,20 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'rxjs-prac';
-  currentMenu = 'of';
+  title = 'rxjs-cheatsheet';
 
-  constructor(){
+  constructor(
+    private router: Router
+  ){
   }
 
   changeMenu(menu) {
-    this.currentMenu = menu;
+    this.router.navigate([menu]);
   }
 
 
